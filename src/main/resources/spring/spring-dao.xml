@@ -21,7 +21,7 @@
     <context:property-placeholder location="classpath:jdbc.properties" />
 
 
-    <!--数据库连接池-->
+
     <bean class="com.alibaba.druid.pool.DruidDataSource" id="dataSource" >
 
         <property name="driverClassName" value="${jdbc.driver}" />
@@ -33,16 +33,16 @@
 
     <bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sessionFactory" >
         <property name="dataSource" ref="dataSource" />
-        <!--注入sqlMap-->
+
         <property name="configLocation" value="classpath:SqlMapConfig.xml" />
         <property name="typeAliasesPackage" value="com.jiyun.sys.pojo" />
-        <!--注入pojo-->
 
-        <!--注入mapper.xml-->
+
+
         <property name="mapperLocations" value="classpath:mapper/**/*Mapper.xml" />
     </bean>
 
-    <!--配置动态代理-->
+
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" >
         <property name="basePackage" value="com.jiyun.sys.dao" />
     </bean>

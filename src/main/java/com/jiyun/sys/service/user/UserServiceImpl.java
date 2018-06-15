@@ -26,12 +26,7 @@ public class UserServiceImpl implements  UserService {
 
     @Transactional
     public int insertSelective(User record) {
-        try {
-            userMapper.insertSelective(record);
-            int i = 10/0;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
         return 0;
     }
 

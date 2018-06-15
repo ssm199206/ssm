@@ -4,9 +4,9 @@
 <configuration>
 
     <settings>
-        <!--懒加载关闭-->
+
         <setting name="lazyLoadingEnabled" value="false" />
-        <!--二级缓存关闭-->
+
         <setting name="cacheEnabled" value="false" />
         <setting name="logPrefix" value="dao." />
     </settings>
@@ -14,10 +14,10 @@
 
 
     <typeAliases>
-        <!-- 所有用到的实体类无需填写 -->
+
     </typeAliases>
 
-    <!-- Mapper.xml无需挨个引入，全部命名规范：以Mapper.xml结尾会自动引入 如：publicMapper.xm -->
+
 
 
 </configuration>
